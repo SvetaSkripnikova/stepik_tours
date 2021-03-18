@@ -18,9 +18,11 @@ from django.urls import path
 from tours.views import main_view
 from tours.views import departure_view
 from tours.views import tour_view
+from tours.views import TestView
 
 urlpatterns = [
     path('', main_view),
     path('departure/<str:departure>/', departure_view),
     path('tour/<int:id>/', tour_view),
+    path('test', TestView.as_view()),
 ]
