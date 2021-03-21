@@ -21,8 +21,8 @@ from tours.views import tour_view
 from tours.views import TestView
 
 urlpatterns = [
-    path('', main_view),
-    path('departure/<str:departure>/', departure_view),
-    path('tour/<int:id>/', tour_view),
+    path('', main_view, name='m'),
+    path('departure/<str:departure>/', departure_view, name='de'),
+    path('tour/<int:id>/', tour_view, name='tour'),
     path('test', TestView.as_view()),
 ]
